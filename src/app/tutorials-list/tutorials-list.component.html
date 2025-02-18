@@ -1,0 +1,10 @@
+<p>tutorials-list works!</p>
+<ul>
+    <li *ngFor="let tutorial of tutorials;let i=index" 
+    (click)="setActiveTutorial(tutorial,i)" routerLink="/tutorials/{{tutorial.id}}">
+        {{ tutorial.title }} - {{tutorial.description}}
+    </li>
+</ul>
+<app-tutorial-details [currentTutorial]="currentTutorial" [viewMode]="true">
+    
+</app-tutorial-details>
